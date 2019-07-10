@@ -1,6 +1,6 @@
 
 object HigherOrderFunctionArea extends App {
-  println(HigherOrderFunctionArea.area("rectangle", 5, 4, rhombusArea))
+  println(HigherOrderFunctionArea.area("rectangle", 5, 4, getRectangleArea))
 
   def area(shape: String, first: Int, second: Int, f: (Int, Int) => Int): String = {
     shape match {
@@ -14,15 +14,15 @@ object HigherOrderFunctionArea extends App {
     }
   }
 
-  def rectangleArea(length: Int, breadth: Int): Int = {
+  def getRectangleArea(length: Int, breadth: Int): Int = {
     length * breadth
   }
 
-  def rhombusArea(diagonal1: Int, diagonal2: Int): Int = {
+  def getRhombusArea(diagonal1: Int, diagonal2: Int): Int = {
     (diagonal1 * diagonal2) / 2
   }
 
-  def parallelogramArea(base: Int, height: Int): Int = {
+  def getParallelogramArea(base: Int, height: Int): Int = {
     base * height
   }
 }
